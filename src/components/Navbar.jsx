@@ -31,7 +31,7 @@ const Navbar = () => {
             )}
             <div className="px-8 flex items-center justify-between w-full">
                 <h1 className="text-lg font-bold">METHUPA</h1>
-                <RxHamburgerMenu />
+                <RxHamburgerMenu className="text-2xl cursor-pointer" />
             </div>
         </div>
     );
