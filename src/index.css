@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+._gradient, body {
+    background: linear-gradient(
+        119deg,
+        rgba(1, 0, 30, 1) 39%,
+        rgba(0, 32, 73, 1) 100%
+    );
+    
+    @apply bg-fixed;
+}
+
+.nav-animate {
+    animation: nav-animate 300ms;
+
+}
+
+@keyframes nav-animate {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 0.25;
+    }
+}
