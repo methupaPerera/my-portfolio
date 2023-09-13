@@ -1,7 +1,11 @@
 import React from "react";
 
 const Home = () => {
-    return <div><a href="#home">home</a></div>;
+    return (
+        <div id="home" className="h-screen flex justify-center items-center">
+            Profile details
+        </div>
+    );
 };
 
 export default Home;
