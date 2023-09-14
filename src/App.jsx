@@ -6,7 +6,7 @@ import { Route, Routes } from "react-router-dom";
 
 const App = () => {
     return (
-        <div className="text-white">
+        <div className="text-white _gradient">
             <Navbar />
             <Routes>
                 <Route index element={<PrimaryLayout />} />

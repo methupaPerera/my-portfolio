@@ -5,8 +5,8 @@ import { Profile } from "../components";
 
 const Main = () => {
     return (
-        <div className="h-screen md:fixed left-0 text-center md:text-left relative">
-            <div className="w-full h-full md:w-1/2 flex flex-col justify-center items-center fixed">
+        <div className="h-screen md:fixed left-0 text-center md:text-left">
+            <div className="w-full h-screen md:w-1/2 flex flex-col justify-center items-center fixed">
                 <div className="px-4 md:px-10">
                     <h1 className="text-[3.5rem] font-bold">
                         I&apos;<span className="text-slate-400">m</span> Methupa
@@ -46,7 +46,7 @@ const NavigationLink = ({ to }) => {
                 smooth={true}
                 duration={500}
             >
-                <div className="w-16 h-1 rounded-full bg-slate-400 group-hover:w-24 group-hover:bg-white peer duration-300"></div>
+                <div className="w-16 h-1 rounded-full bg-slate-400 group-hover:w-24 group-hover:bg-white duration-300"></div>
                 <div>{to.toUpperCase()}</div>
             </Link>
         </div>

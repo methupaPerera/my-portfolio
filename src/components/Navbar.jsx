@@ -22,7 +22,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className="w-full h-16 flex md:hidden justify-between items-center backdrop-blur-lg fixed z-50">
+        <div className="w-full h-16 flex md:hidden justify-between items-center backdrop-blur-sm fixed z-50">
             {isBorderVisible && (
                 <motion.div
                     initial={{ opacity: 0 }}
