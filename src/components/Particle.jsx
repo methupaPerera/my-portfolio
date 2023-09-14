@@ -49,7 +49,7 @@ const Particle = () => {
                         color: "#ffffff",
                         distance: 150,
                         enable: true,
-                        opacity: 0.2,
+                        opacity: 0.1,
                         width: 1,
                     },
                     move: {
@@ -59,7 +59,7 @@ const Particle = () => {
                             default: "bounce",
                         },
                         random: false,
-                        speed: 2,
+                        speed: 1,
                         straight: false,
                     },
                     number: {
@@ -67,7 +67,7 @@ const Particle = () => {
                             enable: true,
                             area: 900,
                         },
-                        value: 30,
+                        value: 40,
                     },
                     opacity: {
                         value: 0.2,
