@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { RxHamburgerMenu } from "react-icons/rx";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
+import { RxHamburgerMenu } from "react-icons/rx";
+
 const Navbar = () => {
-    const [isBorder, setBorder] = useState(false);
+    const [isBorderVisible, setBorderVisible] = useState(false);
 
     useEffect(() => {
         const trackScroll = () => {
             if (scrollY > 0) {
-                setBorder(true);
+                setBorderVisible(true);
             } else {
-                setBorder(false);
+                setBorderVisible(false);
             }
         };
 
@@ -20,8 +22,8 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className="h-16 md:hidden flex items-center justify-between backdrop-blur-sm fixed z-50 w-full">
-            {isBorder && (
+        <div className="w-full h-16 flex md:hidden justify-between items-center backdrop-blur-lg fixed z-50">
+            {isBorderVisible && (
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 0.25 }}
@@ -29,9 +31,11 @@ const Navbar = () => {
                     className="h-[1px] opacity-25 w-full absolute bottom-0 bg-white nav-animate"
                 ></motion.div>
             )}
-            <div className="px-8 flex items-center justify-between w-full">
-                <h1 className="text-lg font-bold">METHUPA</h1>
-                <RxHamburgerMenu className="text-2xl cursor-pointer" />
+            <div className="px-6 w-full flex justify-between items-center">
+                <h1 className="text-2xl font-bold cursor-pointer">
+                    <Link to="/">METHUPA</Link>
+                </h1>
+                <RxHamburgerMenu className="text-4xl cursor-pointer" />
             </div>
         </div>
     );

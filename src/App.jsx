@@ -1,13 +1,16 @@
 import React from "react";
 
-import { Main } from "./pages";
 import { Navbar } from "./components";
+import PrimaryLayout from "./layouts/PrimaryLayout";
+import { Route, Routes } from "react-router-dom";
 
 const App = () => {
     return (
         <div className="text-white">
             <Navbar />
-            <Main />
+            <Routes>
+                <Route index element={<PrimaryLayout />} />
+            </Routes>
         </div>
     );
 };
