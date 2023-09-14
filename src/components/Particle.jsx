@@ -49,7 +49,7 @@ const Particle = () => {
                         color: "#ffffff",
                         distance: 150,
                         enable: true,
-                        opacity: 0.1,
+                        opacity: 0,
                         width: 1,
                     },
                     move: {
@@ -59,15 +59,15 @@ const Particle = () => {
                             default: "bounce",
                         },
                         random: false,
-                        speed: 1,
+                        speed: 0.5,
                         straight: false,
                     },
                     number: {
                         density: {
                             enable: true,
-                            area: 900,
+                            area: 800,
                         },
-                        value: 40,
+                        value: 30,
                     },
                     opacity: {
                         value: 0.2,
@@ -76,7 +76,7 @@ const Particle = () => {
                         type: "circle",
                     },
                     size: {
-                        value: { min: 5, max: 20 },
+                        value: { min: 5, max: 25 },
                     },
                 },
                 detectRetina: true,
