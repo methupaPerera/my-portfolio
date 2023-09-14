@@ -23,5 +23,5 @@ body {
 }
 
 ._active:nth-child(1) div:first-child {
-    @apply w-24 bg-white;
+    @apply w-28 bg-white;
 }

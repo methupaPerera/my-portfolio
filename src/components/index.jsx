@@ -1,3 +1,3 @@
 export { default as Navbar } from "./Navbar";
-export { default as Profile } from "./Profile";
+export { Profile, ProfileLarge } from "./Profile";
 export { default as Particle } from "./Particle";
