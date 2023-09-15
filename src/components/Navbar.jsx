@@ -65,13 +65,13 @@ const Navbar = () => {
                                 <AnimatedLink destination="home" delay={0} />
                                 <AnimatedLink
                                     destination="about"
-                                    delay={0.05}
+                                    delay={0.1}
                                 />
                                 <AnimatedLink
                                     destination="skills"
-                                    delay={0.1}
+                                    delay={0.15}
                                 />
-                                <AnimatedLink destination="blog" delay={0.15} />
+                                <AnimatedLink destination="blog" delay={0.18} />
                             </motion.div>
                         )}
                     </AnimatePresence>
@@ -83,17 +83,23 @@ const Navbar = () => {
 
 const AnimatedLink = ({ destination, delay }) => {
     return (
-        <NavLink to={destination} spy={true} smooth={true} duration={700}>
-            <motion.div
-                className="px-14 py-4 bg-slate-700 hover:bg-slate-800 rounded-xl duration-200"
-                style={{ originX: "right", originY: "top" }}
-                initial={{ rotate: -40 }}
-                animate={{ rotate: 0 }}
-                transition={{ duration: 0.1, delay: delay }}
+        <motion.div
+            style={{ originX: "right", originY: "top" }}
+            initial={{ rotate: -40 }}
+            animate={{ rotate: 0 }}
+            transition={{ duration: 0.4, delay: delay }}
+        >
+            <NavLink
+                to={destination}
+                spy={true}
+                smooth={true}
+                duration={700}
+                className="block px-14 py-4 bg-slate-700 hover:bg-slate-800 rounded-xl duration-200"
+                activeClass="bg-slate-800"
             >
                 {destination.toUpperCase()}
-            </motion.div>
-        </NavLink>
+            </NavLink>
+        </motion.div>
     );
 };
 
