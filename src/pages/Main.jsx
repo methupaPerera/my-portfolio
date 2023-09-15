@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-scroll";
 
-import { Profile } from "../components";
+import { Profile, SocialIcon } from "../components";
+
+import { socialLinks } from "../data/socialLinks";
 
 const Main = () => {
     return (
@@ -21,7 +23,7 @@ const Main = () => {
                     <h2 className="text-slate-400 text-2xl font-bold">
                         Fullstack Developer
                     </h2>
-                    <div className="hidden md:flex flex-col gap-4 mt-10">
+                    <div className="hidden md:flex flex-col gap-4 mt-8">
                         <NavigationLink to="home" />
                         <NavigationLink to="about" />
                         <NavigationLink to="skills" />
@@ -30,6 +32,15 @@ const Main = () => {
                     </div>
                     <div className="md:hidden block">
                         <Profile />
+                    </div>
+                    <div className="mt-10 md:mt-8 -ml-3 md:-ml-0 flex gap-5 justify-center md:justify-start">
+                        {socialLinks.map((link) => {
+                            return (
+                                <SocialIcon link={link.link} key={link.social}>
+                                    {link.icon}
+                                </SocialIcon>
+                            );
+                        })}
                     </div>
                 </div>
             </div>
