@@ -30,7 +30,7 @@ const Home = () => {
                     </h4>
                     <p className="mt-4 -ml-2 w-full md:w-5/6 flex items-center font-medium text-slate-400 text-left">
                         <span className="mr-2 w-[76px] h-[5px] bg-white"></span>
-                        Interested in the entire frontend spectrum and working
+                        Interested in the entire frontend and backend spectrum and working
                         on ambitious projects with positive people.{" "}
                     </p>
                 </div>
