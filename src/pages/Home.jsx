@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <div
             id="home"
-            className="min-h-screen flex justify-center flex-col gap-5 py-10 pl-10 md:pl-6"
+            className="min-h-screen flex justify-center flex-col gap-5 py-10 pl-8 md:pl-6"
         >
             <div className="border-l-[5px] border-white">
                 <div className="md:block hidden mb-8 ml-1">
@@ -28,7 +28,7 @@ const Home = () => {
                         <span className="mr-2 w-10 h-[5px] bg-white"></span>
                         Bandaragama, Sri Lanka{" "}
                     </h4>
-                    <p className="mt-4 w-5/6 md:w-full flex items-center -ml-2 font-medium text-slate-400 text-left">
+                    <p className="mt-4 w-full md:w-5/6 flex items-center -ml-2 font-medium text-slate-400 text-left">
                         <span className="mr-2 w-[76px] h-[5px] bg-white"></span>
                         Interested in the entire frontend spectrum and working
                         on ambitious projects with positive people.{" "}
