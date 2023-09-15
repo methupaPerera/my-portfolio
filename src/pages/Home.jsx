@@ -5,30 +5,30 @@ const Home = () => {
     return (
         <div
             id="home"
-            className="min-h-screen flex justify-center flex-col gap-5 py-10 pl-8 md:pl-6"
+            className="py-10 pl-8 md:pl-6 min-h-screen flex flex-col justify-center gap-5"
         >
             <div className="border-l-[5px] border-white">
-                <div className="md:block hidden mb-8 ml-1">
+                <div className="mb-8 ml-1 hidden md:block">
                     <ProfileLarge />
                 </div>
-                <div className="text-right ml-2 flex flex-col items-start">
-                    <h1 className="text-3xl font-bold flex items-center -ml-2">
+                <div className="ml-2 text-right flex flex-col items-start">
+                    <h1 className="-ml-2 flex items-center text-3xl font-bold">
                         <span className="mt-1 mr-2 w-10 h-[5px] bg-white"></span>
                         Methupa Perera{" "}
                     </h1>
-                    <h2 className="mt-6 text-slate-400 font-medium text-lg flex items-center -ml-2">
+                    <h2 className="mt-6 -ml-2 flex items-center text-slate-400 font-medium text-lg">
                         <span className="mr-2 w-10 h-[5px] bg-white"></span>
                         Making Things Interesting!{" "}
                     </h2>
-                    <h3 className="mt-8 flex items-center -ml-2 font-medium text-lg">
+                    <h3 className="mt-8 -ml-2 flex items-center font-medium text-lg">
                         <span className="mr-2 w-10 h-[5px] bg-white"></span>
                         18 Years{" "}
                     </h3>
-                    <h4 className="mt-8 flex items-center -ml-2 font-medium text-lg">
+                    <h4 className="mt-8 -ml-2 flex items-center font-medium text-lg">
                         <span className="mr-2 w-10 h-[5px] bg-white"></span>
                         Bandaragama, Sri Lanka{" "}
                     </h4>
-                    <p className="mt-4 w-full md:w-5/6 flex items-center -ml-2 font-medium text-slate-400 text-left">
+                    <p className="mt-4 -ml-2 w-full md:w-5/6 flex items-center font-medium text-slate-400 text-left">
                         <span className="mr-2 w-[76px] h-[5px] bg-white"></span>
                         Interested in the entire frontend spectrum and working
                         on ambitious projects with positive people.{" "}
