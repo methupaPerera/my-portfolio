@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Main, Home, About, Skills } from "../pages";
+import Blogs from "../pages/Blogs";
 
 const PrimaryLayout = () => {
     return (
@@ -11,6 +12,7 @@ const PrimaryLayout = () => {
                 <Home />
                 <About />
                 <Skills />
+                <Blogs />
             </div>
         </div>
     );
