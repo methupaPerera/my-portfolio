@@ -27,6 +27,7 @@ const Main = () => {
                         <NavigationLink to="home" />
                         <NavigationLink to="about" />
                         <NavigationLink to="skills" />
+                        <NavigationLink to="work" />
                         <NavigationLink to="blog" />
                         <NavigationLink to="contact" />
                     </div>
