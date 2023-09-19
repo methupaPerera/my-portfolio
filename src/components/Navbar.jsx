@@ -60,7 +60,7 @@ const Navbar = () => {
                                 transition={{ duration: 0.3 }}
                                 style={{ originX: "right", originY: "top" }}
                                 exit={{ rotate: -20, opacity: 0 }}
-                                className="flex flex-col gap-1 cursor-pointer absolute right-14 top-10 select-none"
+                                className="flex flex-col gap-1 cursor-pointer absolute right-14 top-10 select-none text-center"
                             >
                                 <AnimatedLink destination="home" delay={0} />
                                 <AnimatedLink
@@ -71,7 +71,12 @@ const Navbar = () => {
                                     destination="skills"
                                     delay={0.15}
                                 />
-                                <AnimatedLink destination="blog" delay={0.18} />
+                                <AnimatedLink
+                                    destination="work"
+                                    delay={0.18}
+                                />
+                                <AnimatedLink destination="blog" delay={0.2} />
+                                <AnimatedLink destination="contact" delay={0.22} />
                             </motion.div>
                         )}
                     </AnimatePresence>

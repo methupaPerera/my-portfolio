@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Main, Home, About, Skills } from "../pages";
-import Blogs from "../pages/Blogs";
+import { Main, Home, About, Skills } from "../sections";
+import Blogs from "../sections/Blogs";
 
 const PrimaryLayout = () => {
     return (

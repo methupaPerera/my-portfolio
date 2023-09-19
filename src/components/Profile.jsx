@@ -24,7 +24,7 @@ export const ProfileLarge = () => {
         <div className="flex flex-col items-startjustify-center relative">
             <motion.div
                 initial={{ width: 150 }}
-                whileInView={{ width: 224 }}
+                animate={{ width: 224 }}
                 transition={{ duration: 0.5 }}
                 className="w-56 h-40 rounded-r-full bg-slate-700 absolute -top-[1px]"
             ></motion.div>
