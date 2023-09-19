@@ -1,7 +1,8 @@
 import React from "react";
 
 import { Navbar, Particle } from "./components";
-import PrimaryLayout from "./layouts/PrimaryLayout";
+import { PrimaryLayout } from "./layouts";
+import { SkillsList } from "./pages";
 import { Route, Routes } from "react-router-dom";
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
             <Navbar />
             <Routes>
                 <Route index element={<PrimaryLayout />} />
+                <Route path="all-skills" element={<SkillsList />} />
             </Routes>
             <div className="absolute">
                 <Particle />
