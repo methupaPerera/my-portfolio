@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <div
             id="home"
-            className="py-10 pl-8 md:pl-6 min-h-screen flex flex-col justify-center gap-5"
+            className="py-10 px-8 md:pl-6 min-h-screen flex flex-col justify-center gap-5"
         >
             <div className="flex">
                 <div className="w-[10px] bg-white rounded-full"></div>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { Link as NavLink } from "react-scroll";
 import { motion, AnimatePresence } from "framer-motion";
 import "animate.css";
@@ -26,63 +26,75 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className="w-full h-16 flex md:hidden justify-between items-center backdrop-blur-sm fixed z-50">
-            {isBorderVisible && (
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 0.25 }}
-                    transition={{ duration: 0.5 }}
-                    className="h-[1px] opacity-25 w-full absolute bottom-0 bg-white"
-                ></motion.div>
-            )}
-            <div className="px-6 w-full flex justify-between items-center relative">
-                <h1 className="text-2xl font-bold cursor-pointer">
-                    <Link to="/">METHUPA</Link>
-                </h1>
-                <div>
-                    {isNavVisible ? (
-                        <MdOutlineCancel
-                            onClick={() => setNavVisible(false)}
-                            className="text-4xl cursor-pointer animate__animated animate__rotateIn  animate__faster"
-                        />
-                    ) : (
-                        <RxHamburgerMenu
-                            onClick={() => setNavVisible(true)}
-                            className="text-4xl cursor-pointer animate__animated animate__rotateIn animate__faster"
-                        />
-                    )}
-
-                    <AnimatePresence>
-                        {isNavVisible && (
-                            <motion.div
-                                initial={{ rotate: -30, opacity: 0 }}
-                                animate={{ rotate: 0, opacity: 1 }}
-                                transition={{ duration: 0.3 }}
-                                style={{ originX: "right", originY: "top" }}
-                                exit={{ rotate: -20, opacity: 0 }}
-                                className="flex flex-col gap-1 cursor-pointer absolute right-14 top-10 select-none text-center"
-                            >
-                                <AnimatedLink destination="home" delay={0} />
-                                <AnimatedLink
-                                    destination="about"
-                                    delay={0.1}
-                                />
-                                <AnimatedLink
-                                    destination="skills"
-                                    delay={0.15}
-                                />
-                                <AnimatedLink
-                                    destination="work"
-                                    delay={0.18}
-                                />
-                                <AnimatedLink destination="blog" delay={0.2} />
-                                <AnimatedLink destination="contact" delay={0.22} />
-                            </motion.div>
+        <>
+            <div className="w-full h-16 flex md:hidden justify-between items-center backdrop-blur-sm fixed z-50">
+                {isBorderVisible && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 0.25 }}
+                        transition={{ duration: 0.5 }}
+                        className="h-[1px] opacity-25 w-full absolute bottom-0 bg-white"
+                    ></motion.div>
+                )}
+                <div className="px-6 w-full flex justify-between items-center relative">
+                    <h1 className="text-2xl font-bold cursor-pointer">
+                        <Link to="/">METHUPA</Link>
+                    </h1>
+                    <div>
+                        {isNavVisible ? (
+                            <MdOutlineCancel
+                                onClick={() => setNavVisible(false)}
+                                className="text-4xl cursor-pointer animate__animated animate__rotateIn  animate__faster"
+                            />
+                        ) : (
+                            <RxHamburgerMenu
+                                onClick={() => setNavVisible(true)}
+                                className="text-4xl cursor-pointer animate__animated animate__rotateIn animate__faster"
+                            />
                         )}
-                    </AnimatePresence>
+
+                        <AnimatePresence>
+                            {isNavVisible && (
+                                <motion.div
+                                    initial={{ rotate: -30, opacity: 0 }}
+                                    animate={{ rotate: 0, opacity: 1 }}
+                                    transition={{ duration: 0.3 }}
+                                    style={{ originX: "right", originY: "top" }}
+                                    exit={{ rotate: -20, opacity: 0 }}
+                                    className="flex flex-col gap-1 cursor-pointer absolute right-14 top-10 select-none text-center"
+                                >
+                                    <AnimatedLink
+                                        destination="home"
+                                        delay={0}
+                                    />
+                                    <AnimatedLink
+                                        destination="about"
+                                        delay={0.1}
+                                    />
+                                    <AnimatedLink
+                                        destination="skills"
+                                        delay={0.15}
+                                    />
+                                    <AnimatedLink
+                                        destination="work"
+                                        delay={0.18}
+                                    />
+                                    <AnimatedLink
+                                        destination="blog"
+                                        delay={0.2}
+                                    />
+                                    <AnimatedLink
+                                        destination="contact"
+                                        delay={0.22}
+                                    />
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                    </div>
                 </div>
             </div>
-        </div>
+            <Outlet />
+        </>
     );
 };
 

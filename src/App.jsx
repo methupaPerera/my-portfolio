@@ -8,9 +8,10 @@ import { Route, Routes } from "react-router-dom";
 const App = () => {
     return (
         <div className="text-white relative _gradient">
-            <Navbar />
             <Routes>
-                <Route index element={<PrimaryLayout />} />
+                <Route path="/" element={<Navbar />}>
+                    <Route index element={<PrimaryLayout />} />
+                </Route>
                 <Route path="all-skills" element={<SkillsList />} />
             </Routes>
             <div className="absolute">
