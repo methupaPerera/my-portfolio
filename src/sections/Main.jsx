@@ -8,7 +8,7 @@ import { socialLinks } from "../data/socialLinks";
 const Main = () => {
     useEffect(() => {
         const trackBlur = () => {
-            if (scrollY > 20) {
+            if (scrollY > 150) {
                 document.querySelector("#main").classList.add("blur");
             } else {
                 document.querySelector("#main").classList.remove("blur");
@@ -22,7 +22,7 @@ const Main = () => {
     return (
         <div
             id="main"
-            className="md:ml-16 h-screen md:fixed left-0 text-center md:text-left duration-1000"
+            className="md:ml-16 h-screen md:fixed left-0 text-center md:text-left duration-[3s]"
         >
             <div className="w-full h-screen md:w-1/2 flex flex-col justify-center fixed">
                 <div className="px-4 md:pl-10">
