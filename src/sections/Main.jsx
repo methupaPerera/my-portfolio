@@ -10,14 +10,14 @@ const Main = () => {
         <div className="md:ml-16 h-screen md:fixed left-0 text-center md:text-left">
             <div className="w-full h-screen md:w-1/2 flex flex-col justify-center fixed">
                 <div className="px-4 md:pl-10">
-                    <h1 className="text-[3.5rem] font-bold">
+                    <h1 className="text-[3rem] font-bold">
                         I&apos;<span className="text-slate-400">m</span> Methupa
                     </h1>
-                    <h5 className="mb-4 text-4xl font-bold">
+                    <h5 className="mb-4 text-2xl font-bold">
                         Welcome{" "}
-                        <span className="text-3xl text-slate-400">
+                        <span className="text-2xl text-slate-400">
                             to my{" "}
-                            <span className="text-white text-4xl">Space</span>
+                            <span className="text-white text-2xl">Space</span>
                         </span>
                     </h5>
                     <h2 className="text-slate-400 text-2xl font-bold">
