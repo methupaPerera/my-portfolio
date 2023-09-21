@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-scroll";
 
 import { Profile, SocialIcon } from "../components";
@@ -6,19 +6,6 @@ import { Profile, SocialIcon } from "../components";
 import { socialLinks } from "../data/socialLinks";
 
 const Main = () => {
-    useEffect(() => {
-        const trackBlur = () => {
-            if (scrollY > 150) {
-                document.querySelector("#main").classList.add("blur");
-            } else {
-                document.querySelector("#main").classList.remove("blur");
-            }
-        };
-
-        trackBlur();
-        window.addEventListener("scroll", trackBlur);
-    });
-
     return (
         <div
             id="main"
