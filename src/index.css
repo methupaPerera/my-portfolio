@@ -15,7 +15,7 @@ body {
 ._gradient,
 body {
     background: linear-gradient(120deg, #02021a 40%, #00275a 100%);
-    @apply bg-fixed;
+    @apply min-h-screen bg-fixed;
 }
 
 ._active {
