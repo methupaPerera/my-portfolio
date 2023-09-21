@@ -14,7 +14,7 @@ const App = () => {
                 </Route>
                 <Route path="all-skills" element={<SkillsList />} />
             </Routes>
-            <div className="absolute">
+            <div className="absolute hidden md:block">
                 <Particle />
             </div>
         </div>
