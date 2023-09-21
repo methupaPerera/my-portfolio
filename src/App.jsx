@@ -7,7 +7,7 @@ import { Route, Routes } from "react-router-dom";
 
 const App = () => {
     return (
-        <div className="text-white relative _gradient">
+        <div className="text-white relative select-none _gradient">
             <Routes>
                 <Route path="/" element={<Navbar />}>
                     <Route index element={<PrimaryLayout />} />

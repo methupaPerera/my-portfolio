@@ -7,30 +7,30 @@ const Home = () => {
     return (
         <div
             id="home"
-            className="py-10 px-8 md:pl-6 min-h-screen flex flex-col justify-center gap-5"
+            className="py-10 px-4 md:pl-6 min-h-screen flex flex-col justify-center gap-5"
         >
             <div className="flex">
-                <div className="w-[15px] bg-white rounded-full"></div>
+                <div className="w-[20px] bg-white rounded-full"></div>
                 <div className="py-3">
                     <div className="mb-8 ml-1 hidden md:block">
                         <ProfileLarge />
                     </div>
-                    <div className="ml-2 text-right flex flex-col items-start">
-                        <h1 className="-ml-3 flex items-center text-3xl font-bold">
+                    <div className="text-left ml-2 flex flex-col items-start">
+                        <h1 className="-ml-3 flex items-center text-xl md:text-3xl font-bold">
                             <motion.span
                                 initial={{ width: 0 }}
                                 whileInView={{ width: 50 }}
-                                transition={{duration: 0.4, delay: 0.1}}
-                                className="mt-1 mr-2 w-10 h-[5px] bg-white rounded-full"
+                                transition={{ duration: 0.4, delay: 0.1 }}
+                                className="mt-1 mr-2 w-10 h-[8px] bg-white rounded-full"
                             ></motion.span>
                             Methupa Perera{" "}
                         </h1>
-                        <h2 className="mt-6 -ml-3 flex items-center text-slate-400 font-medium text-lg">
+                        <h2 className="text-left mt-6 -ml-3 flex items-center text-slate-400 font-medium text-normal md:text-lg">
                             <motion.span
                                 initial={{ width: 0 }}
                                 whileInView={{ width: 50 }}
-                                transition={{duration: 0.4, delay: 0.1}}
-                                className="mr-2 w-10 h-[5px] bg-white rounded-full"
+                                transition={{ duration: 0.4, delay: 0.1 }}
+                                className="mr-2 w-10 h-[8px] bg-white rounded-full"
                             ></motion.span>
                             Making Things Interesting!{" "}
                         </h2>
@@ -38,8 +38,8 @@ const Home = () => {
                             <motion.span
                                 initial={{ width: 0 }}
                                 whileInView={{ width: 50 }}
-                                transition={{duration: 0.4, delay: 0.1}}
-                                className="mr-2 w-10 h-[5px] bg-white rounded-full"
+                                transition={{ duration: 0.4, delay: 0.1 }}
+                                className="mr-2 w-10 h-[8px] bg-white rounded-full"
                             ></motion.span>
                             18 Years{" "}
                         </h3>
@@ -47,8 +47,8 @@ const Home = () => {
                             <motion.span
                                 initial={{ width: 0 }}
                                 whileInView={{ width: 50 }}
-                                transition={{duration: 0.4, delay: 0.1}}
-                                className="mr-2 w-10 h-[5px] bg-white rounded-full"
+                                transition={{ duration: 0.4, delay: 0.1 }}
+                                className="mr-2 w-10 h-[8px] bg-white rounded-full"
                             ></motion.span>
                             Bandaragama, Sri Lanka{" "}
                         </h4>
@@ -56,8 +56,8 @@ const Home = () => {
                             <motion.span
                                 initial={{ width: 0 }}
                                 whileInView={{ width: 76 }}
-                                transition={{duration: 0.4, delay: 0.1}}
-                                className="mr-2 w-[76px] h-[5px] bg-white rounded-full"
+                                transition={{ duration: 0.4, delay: 0.1 }}
+                                className="mr-2 w-[76px] h-[8px] bg-white rounded-full"
                             ></motion.span>
                             Interested in the entire frontend and backend
                             spectrum and working on ambitious projects with
