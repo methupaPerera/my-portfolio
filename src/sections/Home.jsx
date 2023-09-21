@@ -10,7 +10,7 @@ const Home = () => {
             className="py-10 px-8 md:pl-6 min-h-screen flex flex-col justify-center gap-5"
         >
             <div className="flex">
-                <div className="w-[10px] bg-white rounded-full"></div>
+                <div className="w-[15px] bg-white rounded-full"></div>
                 <div className="py-3">
                     <div className="mb-8 ml-1 hidden md:block">
                         <ProfileLarge />
