@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-scroll";
 
 import { Profile, SocialIcon } from "../components";
@@ -6,8 +6,24 @@ import { Profile, SocialIcon } from "../components";
 import { socialLinks } from "../data/socialLinks";
 
 const Main = () => {
+    useEffect(() => {
+        const trackBlur = () => {
+            if (scrollY > 20) {
+                document.querySelector("#main").classList.add("blur");
+            } else {
+                document.querySelector("#main").classList.remove("blur");
+            }
+        };
+
+        trackBlur();
+        window.addEventListener("scroll", trackBlur);
+    });
+
     return (
-        <div className="md:ml-16 h-screen md:fixed left-0 text-center md:text-left">
+        <div
+            id="main"
+            className="md:ml-16 h-screen md:fixed left-0 text-center md:text-left duration-1000"
+        >
             <div className="w-full h-screen md:w-1/2 flex flex-col justify-center fixed">
                 <div className="px-4 md:pl-10">
                     <h1 className="text-[3rem] font-bold">
