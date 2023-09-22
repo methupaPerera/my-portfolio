@@ -38,7 +38,7 @@ const Skills = () => {
                 })}
             </div>
             
-            <div className="flex justify-end">
+            <div className="mt-6 flex justify-end">
                 <Link
                     to="all-skills"
                     className="flex items-center gap-1 underline text-slate-400 hover:text-white duration-300 font-medium text-lg"
