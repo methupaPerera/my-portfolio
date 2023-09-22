@@ -13,7 +13,7 @@ const Navbar = () => {
 
     useEffect(() => {
         const trackScroll = () => {
-            if (window.scrollY > 0) {
+            if (window.scrollY > 20) {
                 setBorderVisible(true);
             } else {
                 setBorderVisible(false);
@@ -33,7 +33,7 @@ const Navbar = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 0.25 }}
                         transition={{ duration: 0.5 }}
-                        className="h-[1px] opacity-25 w-full absolute bottom-0 bg-white"
+                        className="w-full h-[1px] bg-white opacity-25 absolute bottom-0"
                     ></motion.div>
                 )}
                 <div className="px-6 w-full flex justify-between items-center relative">
@@ -61,7 +61,7 @@ const Navbar = () => {
                                     transition={{ duration: 0.3 }}
                                     style={{ originX: "right", originY: "top" }}
                                     exit={{ rotate: -20, opacity: 0 }}
-                                    className="flex flex-col gap-1 cursor-pointer absolute right-14 top-10 select-none text-center"
+                                    className="flex flex-col gap-1 text-center cursor-pointer select-none absolute right-14 top-10"
                                 >
                                     <AnimatedLink
                                         destination="home"
@@ -69,23 +69,23 @@ const Navbar = () => {
                                     />
                                     <AnimatedLink
                                         destination="about"
-                                        delay={0.1}
+                                        delay={0.06}
                                     />
                                     <AnimatedLink
                                         destination="skills"
-                                        delay={0.15}
+                                        delay={0.11}
                                     />
                                     <AnimatedLink
                                         destination="work"
-                                        delay={0.18}
+                                        delay={0.15}
                                     />
                                     <AnimatedLink
                                         destination="blog"
-                                        delay={0.2}
+                                        delay={0.18}
                                     />
                                     <AnimatedLink
                                         destination="contact"
-                                        delay={0.22}
+                                        delay={0.2}
                                     />
                                 </motion.div>
                             )}
@@ -111,7 +111,7 @@ const AnimatedLink = ({ destination, delay }) => {
                 spy={true}
                 smooth={true}
                 duration={700}
-                className="block px-14 py-4 bg-slate-700 hover:bg-slate-800 rounded-xl duration-200"
+                className="px-14 py-4 block bg-slate-700 hover:bg-slate-800 rounded-lg duration-200"
                 activeClass="bg-slate-800"
             >
                 {destination.toUpperCase()}

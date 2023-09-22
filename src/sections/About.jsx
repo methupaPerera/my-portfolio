@@ -1,21 +1,21 @@
 import React from "react";
-
 import { motion } from "framer-motion";
 
 const About = () => {
     return (
         <div
             id="about"
-            className="px-8 md:px-6 py-10 min-h-screen flex flex-col justify-center gap-10"
+            className="px-8 md:px-6 min-h-screen flex flex-col justify-center gap-10"
         >
             <motion.h4
-                initial={{ opacity: 0, translateY: 200 }}
+                initial={{ opacity: 0, translateY: 150 }}
                 whileInView={{ opacity: 1, translateY: 0 }}
                 transition={{ duration: 0.5 }}
                 className="text-5xl font-bold text-slate-400"
             >
                 About
             </motion.h4>
+
             <motion.div
                 initial={{ opacity: 0, translateY: 150 }}
                 whileInView={{ opacity: 1, translateY: 0 }}
