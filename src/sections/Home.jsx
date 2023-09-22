@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 const Home = () => {
     return (
         <div
-            id="home"
             className="py-10 px-4 md:pl-6 min-h-screen flex flex-col justify-center gap-5"
         >
             <div className="flex">

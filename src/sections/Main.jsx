@@ -8,10 +8,10 @@ import { socialLinks } from "../data/socialLinks";
 const Main = () => {
     return (
         <div
-            id="main"
-            className="md:ml-16 h-screen md:fixed left-0 text-center md:text-left duration-[3s]"
+            id="home"
+            className="md:ml-16 h-screen md:fixed left-0 text-center md:text-left"
         >
-            <div className="w-full h-screen md:w-1/2 flex flex-col justify-center fixed">
+            <div className="w-full h-screen flex flex-col justify-center">
                 <div className="px-4 md:pl-10">
                     <h1 className="text-[3rem] font-bold">
                         I&apos;<span className="text-slate-400">m</span> Methupa
