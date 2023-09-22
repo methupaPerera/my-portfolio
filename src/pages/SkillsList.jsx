@@ -34,6 +34,7 @@ const SkillsList = () => {
                     return (
                         <Skill
                             key={index}
+                            index={index + 1}
                             icon={skill.icon}
                             text={skill.text}
                         />
