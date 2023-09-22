@@ -21,8 +21,12 @@ const Navbar = () => {
         };
 
         window.addEventListener("scroll", trackScroll);
+       document.getElementById("container").addEventListener("click", () => setNavVisible(false));
 
-        return () => window.removeEventListener("scroll", trackScroll);
+        return () => {
+            window.removeEventListener("scroll", trackScroll);
+            window.removeEventListener("click", () => setNavVisible(false));
+        };
     }, []);
 
     return (
