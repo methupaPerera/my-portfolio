@@ -10,7 +10,7 @@ export const Profile = () => {
             <img
                 src={profile}
                 alt="profile"
-                className="w-36 h-36 rounded-full shadow-xl shadow-gray-900 z-50"
+                className="w-36 h-36 rounded-full shadow-xl shadow-gray-900 z-40"
             />
         </div>
     );

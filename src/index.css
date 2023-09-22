@@ -31,11 +31,11 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    @apply bg-slate-500;
+    @apply bg-white;
 }
 
 ::-webkit-scrollbar-thumb {
-    @apply bg-slate-700 rounded-full;
+    @apply bg-slate-800 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
