@@ -15,7 +15,7 @@ const SkillsList = () => {
     return (
         <div className="w-full py-10 px-6 md:px-12">
             <Link
-                to="/"
+                to=".."
                 className="pb-2 flex items-center gap-1 underline text-slate-400 hover:text-white duration-300 font-medium text-lg"
             >
                 <BsArrowLeft className="mt-[1px] text-xl" /> Back

@@ -24,8 +24,7 @@ const Work = ({
             </div>
             <div className="mt-3 flex flex-col gap-2">
                 <p>Link - <a href={link} target="_blank" className="text-slate-400 hover:text-white duration-200 underline">{link.slice(0, 25)}...</a></p>
-                <div className="flex items-center gap-2">
-                    <p>Technologies -</p>
+                <div className="mt-3 flex items-center gap-2">
                     {technologies
                         ? technologies.map((tech) => {
                               return (
@@ -37,10 +36,9 @@ const Work = ({
                                   </p>
                               );
                           })
-                        : "None"}
+                        : ""}
                 </div>
                 <div className="flex items-center gap-2">
-                    <p>Languages -</p>
                     {languages.map((lang) => {
                         return (
                             <p
