@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Main, Home, About, Skills, Work, Contact } from "../sections";
+import { Main, Home, About, Skills, Works, Contact } from "../sections";
 import Blogs from "../sections/Blogs";
 
 const PrimaryLayout = () => {
@@ -12,7 +12,7 @@ const PrimaryLayout = () => {
                 <Home />
                 <About />
                 <Skills />
-                <Work />
+                <Works />
                 <Blogs />
                 <Contact />
             </div>

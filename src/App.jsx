@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 
 import { Navbar, Particle } from "./components";
 import { PrimaryLayout } from "./layouts";
-import { SkillsList } from "./pages";
+import { SkillsList, WorksList } from "./pages";
 
 const App = () => {
     return (
@@ -13,6 +13,7 @@ const App = () => {
                     <Route index element={<PrimaryLayout />} />
                 </Route>
                 <Route path="all-skills" element={<SkillsList />} />
+                <Route path="all-works" element={<WorksList />} />
             </Routes>
             <div className="absolute">
                 <Particle />
