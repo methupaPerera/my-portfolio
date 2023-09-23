@@ -1,4 +1,5 @@
 export { default as profile } from "./profile.jpg";
+export { default as P404 } from "./P404.png";
 
 import todoapp from "./workImages/todoapp.png";
 import portfolio from "./workImages/portfolio.png";
