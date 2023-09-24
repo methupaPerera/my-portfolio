@@ -30,7 +30,7 @@ const Work = ({
                               return (
                                   <p
                                       key={tech}
-                                      className="bg-slate-700 px-2 py-2 rounded-full"
+                                      className="bg-slate-700 px-3 py-2 rounded-full"
                                   >
                                       {tech}
                                   </p>
@@ -43,7 +43,7 @@ const Work = ({
                         return (
                             <p
                                 key={lang}
-                                className="bg-slate-700 px-2 py-2 rounded-full"
+                                className="bg-slate-700 px-3 py-2 rounded-full"
                             >
                                 {lang}
                             </p>
