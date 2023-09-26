@@ -20,8 +20,8 @@ const Blogs = () => {
             </motion.h4>
 
             <div className="flex flex-col gap-5 z-20">
-                {blogList.map((blog) => (
-                    <Blog key={blog.id} {...blog} />
+                {blogList.map((blog, index) => (
+                    <Blog key={blog.id} index={index + 1} {...blog} />
                 ))}
             </div>
 
