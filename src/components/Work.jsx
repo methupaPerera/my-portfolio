@@ -20,9 +20,9 @@ const Work = ({
             <h3 className="text-xl font-medium">{heading}</h3>
             <div className="md:flex gap-2">
                 <img src={image} className="mt-3 md:w-1/2 rounded-lg" />
-                <p className="mt-3 text-[1rem] text-slate-400">{text}</p>
             </div>
-            <div className="mt-3 flex flex-col gap-2">
+            <div className="flex flex-col gap-2">
+                <p className="mt-3 mb-1 text-[1rem] text-slate-400">{text}</p>
                 <p>Link - <a href={link} target="_blank" className="text-slate-400 hover:text-white duration-200 underline">{link.slice(0, 25)}...</a></p>
                 <div className="mt-3 flex items-center gap-2">
                     {technologies
