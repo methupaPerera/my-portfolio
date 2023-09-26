@@ -21,8 +21,8 @@ const Work = ({
             <div className="md:flex gap-2">
                 <img src={image} className="mt-3 md:w-1/2 rounded-lg" />
             </div>
-            <div className="flex flex-col gap-2">
-                <p className="mt-3 mb-1 text-[1rem] text-slate-400">{text}</p>
+            <div className="mt-3 flex flex-col gap-2">
+                <p className="mb-1 text-[1rem] text-slate-400">{text}</p>
                 <p>Link - <a href={link} target="_blank" className="text-slate-400 hover:text-white duration-200 underline">{link.slice(0, 25)}...</a></p>
                 <div className="mt-3 flex items-center gap-2">
                     {technologies
