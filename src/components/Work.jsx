@@ -19,7 +19,7 @@ const Work = ({
         >
             <h3 className="text-xl font-medium">{heading}</h3>
             <div className="md:flex gap-2">
-                <img src={image} className="mt-3 md:w-1/2 rounded-lg" />
+                <img src={image} className="mt-3 w-full rounded-lg" />
             </div>
             <div className="mt-3 flex flex-col gap-2">
                 <p className="mb-1 text-[1rem] text-slate-400">{text}</p>

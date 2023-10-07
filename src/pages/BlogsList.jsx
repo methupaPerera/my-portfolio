@@ -1,8 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
+import { Blog } from "../components";
+import { blogList } from "../data/blogList";
 
 const BlogsList = () => {
-    return <div className=" grid grid-cols-1 md:grid-cols-2 gap-5 "><Link to="2">Blog list</Link></div>;
+    return (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 ">
+            {blogList.map((blog, index) => {
+                return <Blog key={blog.id} index={index + 1} {...blog} />;
+            })}
+        </div>
+    );
 };
 
 export default BlogsList;
