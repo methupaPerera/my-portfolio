@@ -1,9 +1,13 @@
-import React from "react";
+import { useEffect } from "react";
 
 import { Blog } from "../components";
 import { blogList } from "../data/blogList";
 
 const BlogsList = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 ">
             {blogList.map((blog, index) => {
