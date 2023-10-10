@@ -28,4 +28,12 @@ export const blogList = [
                From this blog post you'll know top 5 free web deployment sites",
         date: dateHandler("11-07-2023"),
     },
+    {
+        id: 3,
+        heading: "Top 5 free deployment sites !",
+        image: webdeployment,
+        text: "Every new developer's first difficulty is to find a web deployment site. \
+               From this blog post you'll know top 5 free web deployment sites",
+        date: dateHandler("11-07-2023"),
+    },
 ];

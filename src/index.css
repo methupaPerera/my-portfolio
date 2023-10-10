@@ -12,6 +12,10 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+code {
+    @apply text-slate-400;
+}
+
 ._gradient,
 body {
     background: linear-gradient(120deg, #02021a 40%, #00275a 100%);
@@ -27,7 +31,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    @apply w-3 rounded-full;
+    @apply w-2 rounded-full;
 }
 
 ::-webkit-scrollbar-track {
@@ -41,3 +45,4 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     @apply bg-slate-800;
 }
+  

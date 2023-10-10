@@ -1,7 +1,6 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 
-import { Blog } from "../components";
 import { blogPosts } from "../data/blogPosts";
 
 import { BsArrowReturnLeft } from "react-icons/bs";

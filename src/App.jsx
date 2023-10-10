@@ -7,7 +7,7 @@ import { SkillsList, WorksList, NoPage, BlogsList, SingleBlog } from "./pages";
 
 const App = () => {
     return (
-        <div id="container" className="text-white select-none _gradient">
+        <div id="container" className="text-white _gradient">
             <Routes>
                 <Route path="/" element={<Navbar />}>
                     <Route index element={<PrimaryLayout />} />
