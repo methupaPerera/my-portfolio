@@ -3,11 +3,13 @@ import { blogImages } from "../assets";
 const [verceldeploy, webdeployment] = blogImages;
 
 const dateHandler = (date) => {
-    return new Date(date).toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit",
-    }).replace(/\//g, '-');
+    return new Date(date)
+        .toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit",
+        })
+        .replace(/\//g, "-");
 };
 
 export const blogList = [
@@ -18,7 +20,7 @@ export const blogList = [
         text: "By this blog post, I'm gonna show you how to deploy a \
                Vercel App correctly in vercel. By default you can't just go and import \
                a flask app to vercel and deploy it",
-        date: dateHandler("10-07-2023"),
+        date: dateHandler("10-10-2023"),
     },
     {
         id: 2,
@@ -26,14 +28,6 @@ export const blogList = [
         image: webdeployment,
         text: "Every new developer's first difficulty is to find a web deployment site. \
                From this blog post you'll know top 5 free web deployment sites",
-        date: dateHandler("11-07-2023"),
-    },
-    {
-        id: 3,
-        heading: "Top 5 free deployment sites !",
-        image: webdeployment,
-        text: "Every new developer's first difficulty is to find a web deployment site. \
-               From this blog post you'll know top 5 free web deployment sites",
-        date: dateHandler("11-07-2023"),
+        date: dateHandler("11-10-2023"),
     },
 ];

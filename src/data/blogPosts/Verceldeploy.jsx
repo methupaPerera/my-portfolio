@@ -62,7 +62,7 @@ const Verceldeploy = () => {
                         </h4>
                         <h4>
                             4. After that, go back to the root folder and create
-                            a <code>requirements.txt</code> file which is very
+                            a <code>requirements.txt</code> file and add <code>flask</code> to it which is very
                             important for every python project.&nbsp; (If you're
                             using git, you can use a <code>.gitignore</code>{" "}
                             file in the root folder as you wish.)
