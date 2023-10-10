@@ -5,19 +5,19 @@ import { useEffect } from "react";
 const codeJsx = (
     <code>
         {`{
-    "version": 2,
-    "builds": [
-        {
-            "src": "src/index.py", 
-            "use": "@vercel/python"
-        }
-    ],
-    "routes": [
-        {
-            "src": "/(.*)", 
-            "dest": "src/index.py"
-        }
-    ]
+  "version": 2,
+  "builds": [
+      {
+          "src": "src/index.py", 
+          "use": "@vercel/python"
+      }
+  ],
+  "routes": [
+      {
+          "src": "/(.*)", 
+          "dest": "src/index.py"
+      }
+  ]
 }`}
     </code>
 );
