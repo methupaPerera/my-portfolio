@@ -4,19 +4,13 @@ import { loadSlim } from "tsparticles-slim";
 
 const Particle = () => {
     const particlesInit = useCallback(async (engine) => {
-        console.log(engine);
         await loadSlim(engine);
-    }, []);
-
-    const particlesLoaded = useCallback(async (container) => {
-        await console.log(container);
     }, []);
 
     return (
         <Particles
             id="tsparticles"
             init={particlesInit}
-            loaded={particlesLoaded}
             options={{
                 fpsLimit: 120,
                 interactivity: {
@@ -59,7 +53,7 @@ const Particle = () => {
                             default: "bounce",
                         },
                         random: false,
-                        speed: 0.5,
+                        speed: 0.3,
                         straight: false,
                     },
                     number: {
@@ -76,7 +70,7 @@ const Particle = () => {
                         type: "circle",
                     },
                     size: {
-                        value: { min: 5, max: 25 },
+                        value: { min: 5, max: 30 },
                     },
                 },
                 detectRetina: true,
