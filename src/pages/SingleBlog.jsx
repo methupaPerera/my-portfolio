@@ -7,6 +7,11 @@ import { BsArrowReturnLeft } from "react-icons/bs";
 
 const SingleBlog = () => {
     const { id } = useParams();
+
+    if (id < 0 || id > blogPosts.length) {
+        return <p className="text-slate-400 text-4xl font-bold absolute top-[50%] right-[50%] translate-x-[50%] translate-y-[-50%]">No blog post available.</p>
+    }
+
     return (
         <div>
             <Link

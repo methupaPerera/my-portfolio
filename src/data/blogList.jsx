@@ -28,6 +28,6 @@ export const blogList = [
         image: webdeployment,
         text: "Every new developer's first difficulty is to find a web deployment site. \
                From this blog post you'll know top 5 free web deployment sites",
-        date: dateHandler("11-10-2023"),
+        date: dateHandler("12-10-2023"),
     },
 ];
