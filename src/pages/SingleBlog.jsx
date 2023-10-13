@@ -13,7 +13,7 @@ const SingleBlog = () => {
     }
 
     return (
-        <div>
+        <div className="mx-auto sm:w-3/4 md:w-4/6">
             <Link
                 to=".."
                 className="pb-2 mb-6 flex items-center justify-end gap-1 underline text-slate-400 hover:text-white duration-300 font-medium text-lg"
