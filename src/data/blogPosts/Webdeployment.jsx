@@ -22,7 +22,7 @@ const Webdeployment = () => {
                     deployment site. From this blog post you'll know top 5 free
                     web deployment sites and their benefits as well.
                 </p>
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-6">
                     <div>
                         <h3 className="font-bold text-2xl mb-1">1. Vercel</h3>
                         <p>
