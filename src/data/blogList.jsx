@@ -36,10 +36,11 @@ export const blogList = [
         id: 3,
         heading: "Frontend tools, which will make your life easier !",
         image: frontendtools,
-        text: "When I was a absolute beginner, I'm used to code everything manually. \
-               But months later, I was wondering if there's pre-written code in the internet \
-               to boost my workflow. Then I found some cool stuff after doing some researches and projects. \
-               Now, I'm gonna share those with you !",
+        text: "When I was an absolute beginner, I used to code everything manually. \
+               But months later, I started wondering if there was pre-written code \
+               available on the internet to boost my workflow. Then, after \
+               doing some research and working on projects, I found some cool stuff. Now, \
+               I'm going to share those with you!",
         date: dateHandler("2023-10-16"),
     },
 ];

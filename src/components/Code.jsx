@@ -21,7 +21,7 @@ const Code = ({ children }) => {
     }, [isCopied]);
 
     return (
-        <div className="w-full mx-auto border-[1.5px] border-[#ffffff15] rounded-lg overflow-hidden backdrop-blur-lg z-40">
+        <div className="relative w-full mx-auto border-[1.5px] border-[#ffffff15] rounded-lg overflow-hidden backdrop-blur-lg z-40">
             <div className="px-3 flex justify-between items-center bg-slate-800 p-1 text-xl text-slate-400">
                 <code className="text-sm">Code</code>
                 {isCopied ? (
