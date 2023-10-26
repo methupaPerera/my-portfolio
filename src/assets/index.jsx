@@ -9,4 +9,5 @@ export const workImages = [portfolio, todoapp, cal];
 import verceldeploy from "./blogImages/verceldeploy.png";
 import webdeployment from "./blogImages/webdeployment.png";
 import frontendtools from "./blogImages/frontendtools.png"
-export const blogImages = [verceldeploy, webdeployment, frontendtools];
+import frontendintro from "./blogImages/frontendintro.png"
+export const blogImages = [verceldeploy, webdeployment, frontendtools, frontendintro];

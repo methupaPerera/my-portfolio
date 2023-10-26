@@ -1,6 +1,6 @@
 import { blogImages } from "../assets";
 
-const [verceldeploy, webdeployment, frontendtools] = blogImages;
+const [verceldeploy, webdeployment, frontendtools, frontendintro] = blogImages;
 
 const dateHandler = (dates) => {
     const date = new Date(dates);
@@ -38,9 +38,16 @@ export const blogList = [
         image: frontendtools,
         text: "When I was an absolute beginner, I used to code everything manually. \
                But months later, I started wondering if there was pre-written code \
-               available on the internet to boost my workflow. Then, after \
-               doing some research and working on projects, I found some cool stuff. Now, \
-               I'm going to share those with you!",
+               available on the internet to boost my workflow",
         date: dateHandler("2023-10-16"),
+    },
+    {
+        id: 4,
+        heading: "Introduction to Frontend Development.",
+        image: frontendintro,
+        text: "As I've been involved in coding for a while, I'd like to \
+               provide an introduction to this subject for newcomers. And I'm also going \
+               to give some pieces of advice for you",
+        date: dateHandler("2023-10-25"),
     },
 ];
