@@ -48,6 +48,6 @@ export const blogList = [
         text: "As I've been involved in coding for a while, I'd like to \
                provide an introduction to this subject for newcomers. And I'm also going \
                to give some pieces of advice for you",
-        date: dateHandler("2023-10-25"),
+        date: dateHandler("2023-10-26"),
     },
 ];

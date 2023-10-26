@@ -105,28 +105,42 @@ const Frontendintro = () => {
                         </p>
                     </div>
 
-                    <div className="my-4 text-slate-400">
+                    <div className="mt-4 text-slate-400">
                         <h3 className="font-bold text-xl">Table of Content.</h3>
-                        <div className="font-medium mt-2 ml-4 text-lg">
+                        <div className="flex flex-col gap-2 font-medium mt-2 ml-4 text-lg">
                             <a
                                 href="#first"
-                                className="flex items-center gap-1 cursor-pointer hover:underline"
+                                className="flex items-center gap-1 cursor-pointer hover:underline leading-5"
                             >
                                 <AiOutlineLink />
                                 Familiarize yourself with HTML & CSS.
                             </a>
                             <a
                                 href="#second"
-                                className="flex items-center gap-1 cursor-pointer hover:underline"
+                                className="flex items-center gap-1 cursor-pointer hover:underline leading-5"
                             >
                                 <AiOutlineLink />
                                 Grasp what a programming language is.
                             </a>
+                            <a
+                                href="#third"
+                                className="flex items-center gap-1 cursor-pointer hover:underline leading-5"
+                            >
+                                <AiOutlineLink />
+                                Learn how to use Frontend Frameworks.
+                            </a>
+                            <a
+                                href="#fourth"
+                                className="flex items-center gap-1 cursor-pointer hover:underline leading-5"
+                            >
+                                <AiOutlineLink />
+                                Learn by doing.
+                            </a>
                         </div>
                     </div>
 
-                    <div className="mt-4 flex flex-col gap-4">
-                        <div id="first" className="flex flex-col gap-2">
+                    <div className="flex flex-col gap-4">
+                        <div id="first" className="pt-8 flex flex-col gap-2">
                             <h4 className="font-bold text-lg">
                                 1. Familiarize yourself with HTML & CSS.
                             </h4>
@@ -168,7 +182,7 @@ const Frontendintro = () => {
                                             target="_blank"
                                             className="underline"
                                         >
-                                            https://www.w3schools.com
+                                            w3schools.com
                                         </a>
                                     </p>
                                     <div>
@@ -179,32 +193,257 @@ const Frontendintro = () => {
                                                 target="_blank"
                                                 className="underline"
                                             >
-                                                https://www.youtube.com
+                                                youtube.com
                                             </a>
                                         </p>
                                         <ul className="list-disc ml-16 mt-1">
                                             <li>Web Dev Simplified</li>
                                             <li>Leela Web Dev</li>
                                             <li>Net Ninja</li>
-                                            <li>FreeCodeCamp</li>
+                                            <li>freeCodeCamp</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div id="second" className="mt-2 flex flex-col gap-2">
+                        <div id="second" className="pt-8 flex flex-col gap-2">
                             <h4 className="font-bold text-lg">
-                                2. Grasp what a programming language is.
+                                2. Grasp what a programming language is. - Learn
+                                JavaScript.
                             </h4>
                             <p>
                                 After learning HTML & CSS, you have to learn a
-                                programming language, JavaScript so to say.
+                                programming language, JavaScript so to say. In
+                                JavaScript try to understand what's going on
+                                when you writing code. Don't always do copy and
+                                pasting code as a beginner. It'll make you a
+                                good programmer also.
                             </p>
+                            <p>
+                                Just don't always search for a youtube video
+                                when you encountered to a problem. From that I
+                                meant not to refer to other resources. When you
+                                have an error which doesn't make any sense,
+                                please google it, it saves your time. But my
+                                point is, always try code things on your own.
+                                It'll improve your logical thinking.
+                            </p>
+                            <p>
+                                {" "}
+                                As an example think, you have learned how to do
+                                mathematical operations, logging a message to
+                                the browser console and utilizing control
+                                structures such as if statements and for loops
+                                with JavaScript. By using those you can actually
+                                create a simple calculator right? So, think for
+                                sometime how to do it and try it on your own.
+                                Don't google those things as a beginner.
+                            </p>
+                            <div>
+                                <p className="font-bold text-slate-400">
+                                    Resources
+                                </p>
+                                <div className="text-slate-400 ml-4">
+                                    <p className="mb-1 flex items-center gap-2">
+                                        <FaHandPointRight />{" "}
+                                        <a
+                                            href="https://www.w3schools.com"
+                                            target="_blank"
+                                            className="underline"
+                                        >
+                                            w3schools.com
+                                        </a>
+                                    </p>
+                                    <div>
+                                        <p className="flex items-center gap-2">
+                                            <FaHandPointRight />{" "}
+                                            <a
+                                                href="https://www.youtube.com"
+                                                target="_blank"
+                                                className="underline"
+                                            >
+                                                youtube.com
+                                            </a>
+                                        </p>
+                                        <ul className="list-disc ml-16 mt-1">
+                                            <li>Web Dev Simplified</li>
+                                            <li>JavaScript Mastery</li>
+                                            <li>Net Ninja</li>
+                                            <li>freeCodeCamp</li>
+                                            <li>Traversy Media</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="third" className="pt-8 flex flex-col gap-2">
+                            <h4 className="font-bold text-lg">
+                                3. Learn how to use Frontend Frameworks.
+                            </h4>
+                            <p>
+                                When talking about frameworks, they are just
+                                reusable code written by some other developers.
+                                There are CSS frameworks that you will learn
+                                along your journey, such as Bootstrap and
+                                Tailwind, which are very easy to understand.
+                            </p>
+                            <p>
+                                However, when it comes to JavaScript libraries
+                                like React, Angular, Vue, NextJs & etc, it can
+                                be very confusing as a beginner. Those
+                                frameworks will control how you write code and
+                                will completely change your mind of coding
+                                rather than writing some basic HTML, CSS &
+                                JavaScript code.
+                            </p>
+                            <p>
+                                So, try to understand the underlying logic of
+                                those frameworks and get them in to your code.
+                                Don't just do what the documentation says like a
+                                trained machined.
+                            </p>
+
+                            <div>
+                                <p className="font-bold text-slate-400">
+                                    Resources
+                                </p>
+                                <div className="text-slate-400 ml-4">
+                                    <p className="mb-1 flex items-center gap-2">
+                                        <FaHandPointRight />{" "}
+                                        <a
+                                            href="https://react.dev/"
+                                            target="_blank"
+                                            className="underline"
+                                        >
+                                            react.dev
+                                        </a>
+                                    </p>
+                                    <p className="flex items-center gap-2">
+                                        <FaHandPointRight />{" "}
+                                        <a
+                                            href="https://nextjs.org/"
+                                            target="_blank"
+                                            className="underline"
+                                        >
+                                            nextjs.org
+                                        </a>
+                                    </p>
+                                    <p className="flex items-center gap-2">
+                                        <FaHandPointRight />{" "}
+                                        <a
+                                            href="https://tailwindcss.com/"
+                                            target="_blank"
+                                            className="underline"
+                                        >
+                                            tailwindcss.com
+                                        </a>
+                                    </p>
+                                    <div>
+                                        <p className="flex items-center gap-2">
+                                            <FaHandPointRight />{" "}
+                                            <a
+                                                href="https://www.youtube.com"
+                                                target="_blank"
+                                                className="underline"
+                                            >
+                                                youtube.com
+                                            </a>
+                                        </p>
+                                        <ul className="list-disc ml-16 mt-1">
+                                            <li>Web Dev Simplified</li>
+                                            <li>JavaScript Mastery</li>
+                                            <li>Net Ninja</li>
+                                            <li>freeCodeCamp</li>
+                                            <li>Traversy Media</li>
+                                            <li>Proacademy</li>
+                                            <li>Leela Web Dev</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="fourth" className="pt-8 flex flex-col gap-2">
+                            <h4 className="font-bold text-lg">
+                                3. Learn by doing. - Do Projects.
+                            </h4>
+                            <p>
+                                This is the most important thing to do in order
+                                to become a well-experinced frontend developer.
+                                People can't just learn every concept, memorize
+                                them and use them when they obtained a job.
+                                Nobody can obtain a job like that though. So,
+                                you have to learn some core concepts and do some
+                                projects by applying those concepts in that
+                                project.
+                            </p>
+                            <p>
+                                From the beginner I told don't try to memorize
+                                things because doing projects will help you to
+                                memorize things with zero effort. It's like
+                                memorizing math formulas by solving hundreds of
+                                problems right?
+                            </p>
+                            <p>
+                                {" "}
+                                When doing projects you will encounter some
+                                circumstances which need new knowledge. So, you
+                                can google those and learn new things as well.
+                                As JavaScript has thousands of functions and
+                                methods it's not practical to learn-then-apply
+                                approach but apply-then-learn approach. I'll
+                                provide you some resources to get some project
+                                ideas after you leanred the core concepts of
+                                frontend development.
+                            </p>
+
+                            <div>
+                                <p className="font-bold text-slate-400">
+                                    Resources
+                                </p>
+                                <div className="text-slate-400 ml-4">
+                                    <p className="mb-1 flex items-center gap-2">
+                                        <FaHandPointRight />{" "}
+                                        <a
+                                            href="https://www.codewithrandom.com/"
+                                            target="_blank"
+                                            className="underline"
+                                        >
+                                            codewithrandom.com
+                                        </a>
+                                    </p>
+                                    <div>
+                                        <p className="flex items-center gap-2">
+                                            <FaHandPointRight />{" "}
+                                            <a
+                                                href="https://www.youtube.com"
+                                                target="_blank"
+                                                className="underline"
+                                            >
+                                                youtube.com
+                                            </a>
+                                        </p>
+                                        <ul className="list-disc ml-16 mt-1">
+                                            <li>JavaScript Mastery</li>
+                                            <li>Net Ninja</li>
+                                            <li>freeCodeCamp</li>
+                                            <li>Traversy Media</li>
+                                            <li>EGATOR</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <p className="text-slate-400">
+                Hope you gained some knowledge from this blog post. Thank you
+                for reading and good luck with your journey !
+            </p>
         </motion.div>
     );
 };
