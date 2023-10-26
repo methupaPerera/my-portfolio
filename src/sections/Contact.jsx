@@ -2,6 +2,7 @@ import React from "react";
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { Alert } from "../components";
 
 const Contact = () => {
     const [inputValues, setInputValues] = useState({
@@ -10,10 +11,36 @@ const Contact = () => {
         message: "",
     });
 
+    const [isAlert, setAlert] = useState({
+        status: false,
+        message: "",
+    });
+
     const url = "http://localhost:4000/send-mail";
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+
+        const { name, email, message } = inputValues;
+
+        if (name.trim() == "" || email.trim() == "" || message.trim() == "") {
+            setAlert({
+                ...isAlert,
+                status: true,
+                message: "Please fill all the fields!",
+            });
+
+            setTimeout(() => {
+                setAlert({ ...isAlert, status: false, message: "" });
+            }, 3000);
+            return;
+        }
+
+        setAlert({
+            ...isAlert,
+            status: true,
+            message: "Please wait...",
+        });
 
         const response = await fetch(url, {
             method: "POST",
@@ -23,15 +50,23 @@ const Contact = () => {
             body: JSON.stringify(inputValues),
         });
 
-        const data = await response.json();
+        const { data } = await response.json();
 
-        console.log(data);
+        setAlert({
+            ...isAlert,
+            status: true,
+            message: data.message,
+        });
+
+        setTimeout(() => {
+            setAlert({ ...isAlert, status: false, message: "" });
+        }, 3000);
     };
 
     return (
         <div
             id="contact"
-            className="min-h-screen flex flex-col justify-center px-8 md:px-6 pt-28 pb-8 md:pt-12 md:pb-12"
+            className="min-h-screen flex flex-col justify-center px-8 md:px-6 pt-28 pb-8 md:pt-12 md:pb-12 relative"
         >
             <motion.h4
                 initial={{ opacity: 0, translateY: 200 }}
@@ -56,7 +91,7 @@ const Contact = () => {
                     className="p-4 duration-300 focus:outline-none border-[1.5px] border-[#ffffff15] focus:shadow-[0_0_1rem_] focus:shadow-[#ffffff15]  lg:col-span-1 col-span-2 rounded-xl backdrop-blur-lg bg-transparent z-40"
                 />
                 <input
-                    type="text"
+                    type="email"
                     placeholder="Email"
                     value={inputValues.email}
                     onChange={(event) =>
@@ -85,6 +120,7 @@ const Contact = () => {
                     Send
                 </button>
             </form>
+            <Alert {...isAlert} />
         </div>
     );
 };

@@ -13,14 +13,7 @@ const BlogLayout = () => {
             >
                 <BsArrowLeft className="mt-[1px] text-xl" /> Back
             </Link>
-            <motion.h4
-                initial={{ opacity: 0, translateY: 200 }}
-                whileInView={{ opacity: 1, translateY: 0 }}
-                transition={{ duration: 0.5 }}
-                className="text-5xl font-bold text-white"
-            >
-                Blogs
-            </motion.h4>
+            <h4 className="text-5xl font-bold text-white">Blogs</h4>
 
             <div className="mt-6 z-20">
                 <Outlet />
