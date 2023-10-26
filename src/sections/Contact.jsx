@@ -16,7 +16,7 @@ const Contact = () => {
         message: "",
     });
 
-    const url = "http://localhost:4000/send-mail";
+    const url = "https://my-portfolio-backend-ivory.vercel.app/send-mail";
 
     const handleSubmit = async (event) => {
         event.preventDefault();
