@@ -367,7 +367,7 @@ const Frontendintro = () => {
 
                         <div id="fourth" className="pt-8 flex flex-col gap-2">
                             <h4 className="font-bold text-lg">
-                                3. Learn by doing. - Do Projects.
+                                4. Learn by doing. - Do Projects.
                             </h4>
                             <p>
                                 This is the most important thing to do in order
