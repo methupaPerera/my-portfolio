@@ -21,7 +21,7 @@ const WorksList = () => {
                 <BsArrowLeft className="mt-[1px] text-xl" /> Back
             </Link>
             <motion.h4
-                initial={{ opacity: 0, translateY: 200 }}
+                initial={{ opacity: 0, translateY: 50 }}
                 whileInView={{ opacity: 1, translateY: 0 }}
                 transition={{ duration: 0.5 }}
                 className="text-5xl font-bold text-white"

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Blog = ({ id, heading, image, text, date, index }) => {
     return (
         <motion.div
-            initial={{ opacity: 0, translateY: 150 }}
+            initial={{ opacity: 0, translateY: 50 }}
             whileInView={{ opacity: 1, translateY: 0 }}
             transition={{ duration: 0.4, delay: index / 10 }}
             className="p-4 text-[0.8rem] bg-slate-700 bg-opacity-25 backdrop-blur-lg rounded-xl border-[1.5px] border-[#ffffff15] z-40 cursor-pointer"

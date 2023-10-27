@@ -14,7 +14,7 @@ const Skills = () => {
             className="px-8 md:px-6 pt-28 pb-8 md:pt-12 md:pb-12"
         >
             <motion.h4
-                initial={{ opacity: 0, translateY: 200 }}
+                initial={{ opacity: 0, translateY: 50 }}
                 whileInView={{ opacity: 1, translateY: 0 }}
                 transition={{ duration: 0.5 }}
                 className="mb-10 text-5xl font-bold text-slate-400"
