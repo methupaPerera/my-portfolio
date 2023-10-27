@@ -16,6 +16,18 @@ const Contact = () => {
         message: "",
     });
 
+    const handleAlert = (message) => {
+        setAlert({
+            ...isAlert,
+            status: true,
+            message: message,
+        });
+
+        setTimeout(() => {
+            setAlert({ ...isAlert, status: false, message: "" });
+        }, 3000);
+    };
+
     const url = "https://my-portfolio-backend-ivory.vercel.app/send-mail";
 
     const handleSubmit = async (event) => {
@@ -24,43 +36,27 @@ const Contact = () => {
         const { name, email, message } = inputValues;
 
         if (name.trim() == "" || email.trim() == "" || message.trim() == "") {
-            setAlert({
-                ...isAlert,
-                status: true,
-                message: "Please fill all the fields!",
-            });
-
-            setTimeout(() => {
-                setAlert({ ...isAlert, status: false, message: "" });
-            }, 3000);
+            handleAlert("Please fill all the fields!");
             return;
         }
 
-        setAlert({
-            ...isAlert,
-            status: true,
-            message: "Please wait...",
-        });
+        handleAlert("Please wait...");
 
-        const response = await fetch(url, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(inputValues),
-        });
+        try {
+            const response = await fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(inputValues),
+            });
 
-        const { data } = await response.json();
+            const { data } = await response.json();
 
-        setAlert({
-            ...isAlert,
-            status: true,
-            message: data.message,
-        });
-
-        setTimeout(() => {
-            setAlert({ ...isAlert, status: false, message: "" });
-        }, 3000);
+            handleAlert("Email sent!")
+        } catch (err) {
+            handleAlert("Something went wrong!")
+        }
     };
 
     return (
