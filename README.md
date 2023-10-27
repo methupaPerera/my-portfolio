@@ -5,6 +5,8 @@ This is my portfolio website. I built it to showcase my skills,
 mainly in front-end development. If you're interested, 
 please go through my code and get inspired too.
 
+<p>Deployment link - https://methupa.vercel.app/</p>
+
 ### Technologies and external packages used.
 
 ```
