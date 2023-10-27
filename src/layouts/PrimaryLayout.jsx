@@ -1,7 +1,6 @@
 import React from "react";
 
-import { Main, Home, About, Skills, Works, Contact } from "../sections";
-import Blogs from "../sections/Blogs";
+import { Main, Home, About, Skills, Works, Blogs } from "../sections";
 
 const PrimaryLayout = () => {
     return (
@@ -14,7 +13,6 @@ const PrimaryLayout = () => {
                 <Skills />
                 <Works />
                 <Blogs />
-                <Contact />
             </div>
         </div>
     );

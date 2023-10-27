@@ -87,10 +87,6 @@ const Navbar = () => {
                                         destination="blog"
                                         delay={0.18}
                                     />
-                                    <AnimatedLink
-                                        destination="contact"
-                                        delay={0.2}
-                                    />
                                 </motion.div>
                             )}
                         </AnimatePresence>

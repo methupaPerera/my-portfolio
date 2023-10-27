@@ -31,7 +31,6 @@ const Main = () => {
                         <NavigationLink to="skills" />
                         <NavigationLink to="work" />
                         <NavigationLink to="blog" />
-                        <NavigationLink to="contact" />
                     </div>
                     <div className="md:hidden block">
                         <Profile />
