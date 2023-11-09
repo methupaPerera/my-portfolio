@@ -1,7 +1,9 @@
-import Verceldeploy from "./Verceldeploy";
-import Webdeployment from "./Webdeployment";
-import Frontendtools from "./Frontendtools";
-import Frontendintro from "./Frontendintro";
+import React, { lazy } from "react";
+
+const Verceldeploy = lazy(() => import("./Verceldeploy"));
+const Webdeployment = lazy(() => import("./Webdeployment"));
+const Frontendtools = lazy(() => import("./Frontendtools"));
+const Frontendintro = lazy(() => import("./Frontendintro"));
 
 export const blogPosts = [
     <Verceldeploy />,
