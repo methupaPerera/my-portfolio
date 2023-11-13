@@ -1,6 +1,12 @@
 import { blogImages } from "../assets";
 
-const [verceldeploy, webdeployment, frontendtools, frontendintro] = blogImages;
+const [
+    verceldeploy,
+    webdeployment,
+    frontendtools,
+    frontendintro,
+    backenddeploy,
+] = blogImages;
 
 const dateHandler = (dates) => {
     const date = new Date(dates);
@@ -50,4 +56,12 @@ export const blogList = [
                to give some pieces of advice for you",
         date: dateHandler("2023-10-26"),
     },
-];
+    {
+        id: 5,
+        heading: "Deploy your backend app for free !",
+        image: backenddeploy,
+        text: "Over the last few days, I've been exploring ways to deploy a backend application \
+        for development purposes. That's when I came across 'Vercel Serverless Functions.",
+        date: dateHandler("2023-11-13"),
+    },
+].reverse();

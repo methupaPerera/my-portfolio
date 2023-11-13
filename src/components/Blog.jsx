@@ -15,7 +15,7 @@ const Blog = ({ id, heading, image, text, date, index }) => {
                 className="h-full flex flex-col justify-between gap-5 "
             >
                 <h3 className="text-xl font-medium">{heading}</h3>
-                <img src={image} className="w-full rounded-lg" />
+                <img src={image} className="w-full rounded-lg" loading="lazy" />
                 <p className="text-normal">
                     {text}
                     <span className="text-slate-400">...see more</span>

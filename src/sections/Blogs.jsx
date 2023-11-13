@@ -20,7 +20,7 @@ const Blogs = () => {
             </motion.h4>
 
             <div className="flex flex-col gap-5 z-20">
-                {blogList.reverse().map((blog, index) => {
+                {blogList.map((blog, index) => {
                     if (index > 1) {
                         return;
                     }

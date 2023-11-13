@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
-import { motion } from "framer-motion";
 
 import { BsArrowLeft } from "react-icons/bs";
 
