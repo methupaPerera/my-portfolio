@@ -1,15 +1,15 @@
-import React from "react";
-import { Link } from "react-scroll";
+import { useState } from "react";
 
 import { Profile, SocialIcon } from "../components";
 
 import { socialLinks } from "../data/socialLinks";
+import { navLinks } from "../data/navLinks";
 
 const Main = () => {
+    const [activeIndex, setActiveIndex] = useState(0);
+
     return (
-        <div
-            className="md:ml-16 h-screen text-center md:text-left md:fixed left-0"
-        >
+        <div className="md:ml-16 h-screen text-center md:text-left md:fixed left-0">
             <div className="w-full h-screen flex flex-col justify-center">
                 <div className="px-4 md:pl-10">
                     <h1 className="text-[3rem] font-bold">
@@ -26,11 +26,17 @@ const Main = () => {
                         Fullstack Developer
                     </h2>
                     <div className="hidden md:flex flex-col gap-4 mt-8">
-                        <NavigationLink to="home" />
-                        <NavigationLink to="about" />
-                        <NavigationLink to="skills" />
-                        <NavigationLink to="work" />
-                        <NavigationLink to="blog" />
+                        {navLinks.map((link, index) => {
+                            return (
+                                <NavigationLink
+                                    key={link}
+                                    to={link}
+                                    index={index}
+                                    activeIndex={activeIndex}
+                                    setActiveIndex={setActiveIndex}
+                                />
+                            );
+                        })}
                     </div>
                     <div className="md:hidden block">
                         <Profile />
@@ -50,20 +56,22 @@ const Main = () => {
     );
 };
 
-const NavigationLink = ({ to }) => {
+const NavigationLink = ({ to, index, activeIndex, setActiveIndex }) => {
+    const baseClassName =
+        "flex items-center gap-4 text-slate-400 text-sm font-bold group-hover:text-white duration-300 cursor-pointer";
+    const className =
+        activeIndex === index ? "_active " + baseClassName : baseClassName;
+
     return (
         <div className="group">
-            <Link
-                className="flex items-center gap-4 text-slate-400 text-sm font-bold group-hover:text-white duration-300 cursor-pointer"
-                activeClass="_active"
-                to={to}
-                spy={true}
-                smooth={true}
-                duration={500}
+            <a
+                onClick={() => setActiveIndex(index)}
+                href={`#${to}`}
+                className={className}
             >
                 <div className="w-16 h-1 rounded-full bg-slate-400 group-hover:w-28 group-hover:bg-white duration-300"></div>
                 <div>{to.toUpperCase()}</div>
-            </Link>
+            </a>
         </div>
     );
 };

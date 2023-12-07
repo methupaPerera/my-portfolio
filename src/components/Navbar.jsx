@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
-import { Link as NavLink } from "react-scroll";
 import { motion, AnimatePresence } from "framer-motion";
+import { navLinks, navLinkDelay } from "../data/navLinks";
 import "animate.css";
 
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -10,6 +10,7 @@ import { MdOutlineCancel } from "react-icons/md";
 const Navbar = () => {
     const [isBorderVisible, setBorderVisible] = useState(false);
     const [isNavVisible, setNavVisible] = useState(false);
+    const [activeIndex, setActiveIndex] = useState(0);
 
     useEffect(() => {
         const trackScroll = () => {
@@ -21,7 +22,9 @@ const Navbar = () => {
         };
 
         window.addEventListener("scroll", trackScroll);
-       document.getElementById("container").addEventListener("click", () => setNavVisible(false));
+        document
+            .getElementById("container")
+            .addEventListener("click", () => setNavVisible(false));
 
         return () => {
             window.removeEventListener("scroll", trackScroll);
@@ -67,26 +70,18 @@ const Navbar = () => {
                                     exit={{ rotate: -20, opacity: 0 }}
                                     className="flex flex-col gap-1 text-center cursor-pointer select-none absolute right-14 top-10"
                                 >
-                                    <AnimatedLink
-                                        destination="home"
-                                        delay={0}
-                                    />
-                                    <AnimatedLink
-                                        destination="about"
-                                        delay={0.06}
-                                    />
-                                    <AnimatedLink
-                                        destination="skills"
-                                        delay={0.11}
-                                    />
-                                    <AnimatedLink
-                                        destination="work"
-                                        delay={0.15}
-                                    />
-                                    <AnimatedLink
-                                        destination="blog"
-                                        delay={0.18}
-                                    />
+                                    {navLinks.map((link, index) => {
+                                        return (
+                                            <AnimatedLink
+                                                key={link + index}
+                                                destination={link}
+                                                delay={navLinkDelay[index]}
+                                                index={index}
+                                                activeIndex={activeIndex}
+                                                setActiveIndex={setActiveIndex}
+                                            />
+                                        );
+                                    })}
                                 </motion.div>
                             )}
                         </AnimatePresence>
@@ -98,7 +93,20 @@ const Navbar = () => {
     );
 };
 
-const AnimatedLink = ({ destination, delay }) => {
+const AnimatedLink = ({
+    destination,
+    delay,
+    index,
+    activeIndex,
+    setActiveIndex,
+}) => {
+    const baseClassName =
+        "px-14 py-4 block bg-slate-700 hover:bg-slate-800 rounded-lg duration-200";
+    const className =
+        activeIndex === index
+            ? "!bg-slate-800 " + baseClassName
+            : baseClassName;
+
     return (
         <motion.div
             style={{ originX: "right", originY: "top" }}
@@ -106,16 +114,13 @@ const AnimatedLink = ({ destination, delay }) => {
             animate={{ rotate: 0 }}
             transition={{ duration: 0.4, delay: delay }}
         >
-            <NavLink
-                to={destination}
-                spy={true}
-                smooth={true}
-                duration={700}
-                className="px-14 py-4 block bg-slate-700 hover:bg-slate-800 rounded-lg duration-200"
-                activeClass="bg-slate-800"
+            <a
+                onClick={() => setActiveIndex(index)}
+                href={`#${destination}`}
+                className={className}
             >
                 {destination.toUpperCase()}
-            </NavLink>
+            </a>
         </motion.div>
     );
 };
