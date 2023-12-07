@@ -9,10 +9,7 @@ import { BsArrowRight } from "react-icons/bs";
 
 const Skills = () => {
     return (
-        <div
-            id="skills"
-            className="px-8 md:px-6 pt-28 pb-8 md:pt-12 md:pb-12"
-        >
+        <div id="skills" className="px-8 md:px-6 pt-28 pb-8 md:pt-12 md:pb-12">
             <motion.h4
                 initial={{ opacity: 0, translateY: 50 }}
                 whileInView={{ opacity: 1, translateY: 0 }}
@@ -24,7 +21,13 @@ const Skills = () => {
 
             <div className="flex flex-col gap-5 z-20">
                 {skillsList.map((skill, index) => {
-                    if (index <= 2 || index > 5) {
+                    const check =
+                        index !== 4 ||
+                        index !== 5 ||
+                        index !== 6 ||
+                        index !== 7 ||
+                        index !== 8;
+                    if (check) {
                         return;
                     }
                     return (
@@ -37,7 +40,7 @@ const Skills = () => {
                     );
                 })}
             </div>
-            
+
             <div className="mt-6 flex justify-end">
                 <Link
                     to="all-skills"
