@@ -22,12 +22,12 @@ const Skills = () => {
             <div className="flex flex-col gap-5 z-20">
                 {skillsList.map((skill, index) => {
                     const check =
-                        index !== 4 ||
-                        index !== 5 ||
-                        index !== 6 ||
-                        index !== 7 ||
-                        index !== 8;
-                    if (check) {
+                        index == 4 ||
+                        index == 5 ||
+                        index == 6 ||
+                        index == 7 ||
+                        index == 8;
+                    if (!check) {
                         return;
                     }
                     return (
