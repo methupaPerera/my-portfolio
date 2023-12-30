@@ -44,8 +44,9 @@ const Main = () => {
                     <div className="mt-10 md:mt-8 -ml-3 md:-ml-0 flex gap-5 justify-center md:justify-start">
                         {socialLinks.map((link) => {
                             return (
-                                <SocialIcon link={link.link} key={link.social}>
+                                <SocialIcon link={link.link} name={link.social} key={link.social}>
                                     {link.icon}
+                                    {console.log(link.icon)}
                                 </SocialIcon>
                             );
                         })}
