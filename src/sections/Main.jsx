@@ -4,6 +4,7 @@ import { Profile, SocialIcon } from "../components";
 
 import { socialLinks } from "../data/socialLinks";
 import { navLinks } from "../data/navLinks";
+import { Typewriter } from "react-simple-typewriter";
 
 const Main = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -23,7 +24,15 @@ const Main = () => {
                         </span>
                     </h5>
                     <h2 className="text-slate-400 text-2xl font-bold">
-                        Fullstack Developer
+                        <Typewriter
+                            words={["Fullstack Developer", "Frontend Designer"]}
+                            loop={5}
+                            cursor
+                            cursorStyle="_"
+                            typeSpeed={60}
+                            deleteSpeed={20}
+                            delaySpeed={800}
+                        />
                     </h2>
                     <div className="hidden md:flex flex-col gap-4 mt-8">
                         {navLinks.map((link, index) => {
@@ -44,7 +53,11 @@ const Main = () => {
                     <div className="mt-10 md:mt-8 -ml-3 md:-ml-0 flex gap-5 justify-center md:justify-start">
                         {socialLinks.map((link) => {
                             return (
-                                <SocialIcon link={link.link} name={link.social} key={link.social}>
+                                <SocialIcon
+                                    link={link.link}
+                                    name={link.social}
+                                    key={link.social}
+                                >
                                     {link.icon}
                                     {console.log(link.icon)}
                                 </SocialIcon>
