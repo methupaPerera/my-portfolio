@@ -40,7 +40,7 @@ const Home = () => {
                                 transition={{ duration: 0.4, delay: 0.2 }}
                                 className="mr-2 w-10 h-[8px] bg-white rounded-full"
                             ></motion.span>
-                            18 Years{" "}
+                            19 Years{" "}
                         </h3>
 
                         <h4 className="mt-8 -ml-3 flex items-center font-medium text-lg">

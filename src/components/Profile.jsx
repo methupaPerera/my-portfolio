@@ -28,7 +28,7 @@ export const ProfileLarge = () => {
             <img
                 src={profile}
                 alt="profile"
-                className="w-36 h-36 rounded-r-full shadow-xl shadow-gray-900 z-50"
+                className="w-[120px] h-[150px] rounded-r-full shadow-xl shadow-gray-900 z-50"
             />
         </div>
     );

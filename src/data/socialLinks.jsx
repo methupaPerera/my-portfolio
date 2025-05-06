@@ -1,4 +1,4 @@
-import { BsFacebook, BsGithub, BsInstagram } from "react-icons/bs";
+import { BsFacebook, BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
 
 export const socialLinks = [
@@ -9,7 +9,7 @@ export const socialLinks = [
     },
     {
         social: "Instagram",
-        link: "https://instagram.com/_methupa/",
+        link: "https://instagram.com/methupa.perera/",
         icon: <BsInstagram />,
     },
     {
@@ -21,5 +21,10 @@ export const socialLinks = [
         social: "Github",
         link: "https://github.com/methupaPerera",
         icon: <BsGithub />,
+    },
+    {
+        social: "Linkedin",
+        link: "https://linkedin.com/in/methupaperera/",
+        icon: <BsLinkedin />,
     },
 ];
